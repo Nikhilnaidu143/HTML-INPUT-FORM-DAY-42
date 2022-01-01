@@ -45,11 +45,11 @@ salary.addEventListener('input',function(){
     salaryOutput.textContent = salary.value;
 });
 
-/** Password Validation UC-4(RULE-1):- minimum 8 characters. */
+/** Password Validation. */
 const password = document.querySelector('#pwd');
 const passwordError = document.querySelector('.pwd-error');
 password.addEventListener('input',function(){
-    let passwordRegex = /^[A-Za-z0-9]{8,}$/;
+    let passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=[\w]*[\W][\w]*$)(?=.*[a-z]).{8,}$/;
     if(passwordRegex.test(password.value)){
         passwordError.textContent = " ";
     }
