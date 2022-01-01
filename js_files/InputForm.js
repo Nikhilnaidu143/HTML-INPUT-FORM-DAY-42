@@ -24,6 +24,19 @@ email.addEventListener('input',function(){
     }
 });
 
+/** Phone Number validation. */
+const phoneNum = document.querySelector('#PhoneNum');
+const phoneNumError = document.querySelector('.ph-error');
+phoneNum.addEventListener('input',function(){
+    let phoneNumRegex = /^[\d]{2}(\s){1}[\d]{10}$/;
+    if(phoneNumRegex.test(phoneNum)){
+        phoneNumError.textContent = " ";
+    }
+    else{
+        phoneNumError.textContent = "Phone Number is invalid."
+    }
+});
+
 /** Salary Output. */
 const salary = document.querySelector('#salary');
 const salaryOutput = document.querySelector('.salary-output');
