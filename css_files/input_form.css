@@ -49,6 +49,11 @@ button{
     width: 70%;
     margin: 0 auto;
 }
+error-output{
+    font-size: 17px;
+    font-style: italic;
+    color: red;
+}
 p{
     text-align: center;
 }
